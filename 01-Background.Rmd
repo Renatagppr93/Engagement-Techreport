@@ -1,0 +1,22 @@
+# Background {#background}
+
+The idea for an engagement survey originated in the Fall of 2018. Several students crafted items intended to measure different theoretical dimensions of engagement (the students were not constrained to one theoretical model). These items served as an initial pool of candidate items.
+
+The three identified *substantive* dimensions of Dedication, Vigor, and Absorption were most directly informed by @schaufeli_measurement_2002. Fulfillment was an additional consideration, but was eventually dropped [WHY DID WE DROP IT?]
+
+We also attempted to refine the substantive domain definitions conducting a Modified Q-sort, asking graduate student raters to form piles of items that have commonalities. The students were then asked to identify the theme of the piles - in theory, these "names" become scale descriptions. Ultimately these themes were deemed not especially informative, and we decided to pursue something close to the @schaufeli_measurement_2002 definitions.
+
+Additionally, it was decided that it would be fun and different to overlay a second organizing theme in the form of attitudinal components. The intent is for items to be "intentionally complex", conforming to a bi-factor structural model defined by both substance and attitudinal component. The attitudinal components were informed by @eagly_psychology_1993.
+
+Eagle I.O's definition of engagement:
+
+**A state of personal immersion in work characterized by enthusiasm, dedication, and personal investment, expressed cognitively, affectively, and behaviorally in the proactive pursuit of advancing organizational goals**
+
+>We lost the document where we had saved the citations for the creation of our >engagement dimensions. we found it today (02/04/2020). 
+Three out of the four dimensions (Dedication, Vigor, and Absorbtion) came from Schaufeli et al, (2002), and we are trying to find where Fulfillment came from. 
+We are also trying to improve the definition of each domain by looking at the current items and conducting a Modified Q sort (not correct name) to create piles of items that have commonalities within each domain. 
+
+> also need to revisit these and do a little literature review:
+@simpson_engagement_2009
+[@harter_business_2002; @kahn_psychological_1990; @leiter_areas_2003; @R-base; @R-rmarkdown; @rothbard_enriching_2001; @saks_antecedents_2006; @schaufeli_measurement_2002; @simpson_engagement_2009]
+
