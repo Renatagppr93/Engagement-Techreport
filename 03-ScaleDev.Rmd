@@ -1,0 +1,7 @@
+# Scale Development {#items}
+
+A roster of candidate items was culled from student projects. These items were further edited and expanded on during the Fall of 2019 and Spring of 2020, after the Absorption, Dedication, and Vigor as well as Affective, Behavioral, and Cognitive dimensions were settled upon.
+
+A candidate list of 35 items was rated by XX graduate students. Each student rater placed each item within one of three substantive as well as one of three attitudinal categories
+
+> this failed at the authentication phase: library(googlesheets); be <- gs_title("Engagement Survey Items")
