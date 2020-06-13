@@ -1,3 +1,3 @@
-# Final Words
+# Results
 
-We have finished a nice book.
+Describe initial validation results here (criterion/construct... content validation can be described in Chapter \@ref(items)
