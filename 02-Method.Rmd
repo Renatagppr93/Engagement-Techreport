@@ -4,7 +4,7 @@
 
 ## Intended Structure {#ABCDAV}
 
-At some point we decided to attempt an *a priori* bi-factor structure, whereby each of the substantive dimensions (Dedication, Vigor, and Absorption)[^1] could further be deconstructed into the attitudinal elements of Cognition, Affect, and Behavior [see, for example, @eagly_psychology_1993; @rosenberg_cognitive_1960]. 
+Within the broader process of conceptual construct specification, we decided to attempt an *a priori* bi-factor structure, whereby each of the substantive dimensions (Dedication, Vigor, and Absorption)[^1] could further be deconstructed into the attitudinal elements of Cognition, Affect, and Behavior [see, for example, @eagly_psychology_1993; @rosenberg_cognitive_1960]. Appendix \@ref(timeline) somewhat documents this line of thought. 
 
 Through item-writing and revision, it began to dawn on us that the substantive elements may already reflect the Cognition (Vigor), Affect (Absorption), and Behavioral (Dedication) dimensions. As of August, 2020, however, we could not locate a source article that made this potential confound explicit, so we persisted through crafting items that reflected cognitive, affective, and behavioral indicators of each substantive dimension. [^2]
 

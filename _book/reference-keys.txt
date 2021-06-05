@@ -19,7 +19,7 @@ tab:rdrop14
 tab:rdrop15
 tab:freqtables
 intro
-definitions-of-engagement
+engagement-the-psychological-construct
 instrument-creation
 ABCDAV
 item-generation
@@ -43,7 +43,7 @@ things-to-do
 research-projects
 author-bios
 references
-timeline-of-events
+timeline
 spring-2019
 spring-2020
 february-4-2020
