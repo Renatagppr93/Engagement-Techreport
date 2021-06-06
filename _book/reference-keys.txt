@@ -19,7 +19,7 @@ tab:rdrop14
 tab:rdrop15
 tab:freqtables
 intro
-engagement-the-psychological-construct
+engagement-as-a-psychological-construct
 instrument-creation
 ABCDAV
 item-generation
@@ -57,8 +57,10 @@ scale-level-correlations
 substantive-scales
 attitudinal-scales
 rdrops
-substantive-scale-marginal-level
-substantive-scale-cell-level
+marginal-level
+attitudinal
+construct-substantive
+cell-level
 qualitative
 frequency-distributions-by-dimension
 tables-of-qualitative-indices

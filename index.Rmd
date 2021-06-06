@@ -7,7 +7,7 @@ always_allow_html: yes
 documentclass: book
 cover-image: "EE.jpeg"
 bibliography: [book.bib, engage.bib, packages.bib, bifactor.bib]
-csl: apa.csl
+csl: apa2.csl
 #biblio-style: "apalike"
 link-citations: yes
 toc-depth: 4

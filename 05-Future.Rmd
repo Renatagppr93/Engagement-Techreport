@@ -32,5 +32,20 @@ Eventually Eagle could optimize interpretation via contributions of cognitive ps
 Three projects are being targetted for SIOP 2022: 
 
 1. Engagement instrument development
+  + document the *a priori* bi-factor pursuit
+  + pilot study with 36 items culled to 18 final 
+  + "ignore" pilot conditions (e.g., not the focus of write-up)
+  + four levels of feedback:
+    + overall (engagement)
+    + marginal (substantive)
+    + marginal (attitudinal)
+    + cell (substantive x attitudinal)
+  + [Morgan taking the lead (6/3/21)](https://github.com/Morgan-Russell/SIOP-Engagement)
 2. Measurement invariance across the 4 pilot administration conditions
+  + focus on 4 pilot conditions
+  + look into item ordering literature (probably from 1970's)
+  + relative strength of association (item-trait) based on item ordering
+  + if we do this only with final scale definitions won't the conditions be watered-down?
+  + [Casey taking the lead (6/3/21)](https://github.com/casosorio/SIOP-Engagement-Measurment-Invariance)
 3. Engagement instrument validation (data collection summer 2021)
+  + Need to first finalize scale definitions

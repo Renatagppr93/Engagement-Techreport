@@ -1,6 +1,7 @@
 bookdown::gitbook:
   split_bib: no
-  css: style.css
+  css: style2.css
+  csl: "apa2.csl"
   config:
     toc_depth: 1
     toc:

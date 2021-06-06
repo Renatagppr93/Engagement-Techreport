@@ -173,7 +173,9 @@ psych::pairs.panels(testing[37:42])
 
 # Corrected item-total correlations {#rdrops}
 
-## Substantive scale (marginal level)
+## "Marginal" level
+
+### Attitudinal
 
 ```{r rdrop1, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -196,6 +198,7 @@ kable(cogni$item.stats[-c(2:4)], digits=2, caption="Cognitive Items")
 
 ```
 
+### Construct Substantive
 
 ```{r rdrop4, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -217,7 +220,7 @@ kable(dedic$item.stats[-c(2:4)], digits=2, caption="Dedication Items")
 
 ```
 
-## Substantive scale (cell level)
+## "Cell" level
 
 ```{r rdrop7, echo=FALSE, warning=FALSE, message=FALSE}
 
