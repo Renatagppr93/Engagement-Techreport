@@ -65,7 +65,7 @@ Definitions as of 5/19/2020:
 
 The development team "content validation" as well as the broader content validation to inform the pilot administration (see Chapter \@ref(CValid)) retained these definitions we ordered all the items according to the ones we individually selected for each category and created an item bank with the remaining items. Together we placed the items in the bank into the agreed upon categories. 
 
-# Pilot conditions {#pilot2}
+# Pilot conditions and Geography {#pilot2}
 
 Our four orderings of items were randomized within dimension (Affective, Behavioral, Cognitive or Dedication, Absorption, Vigor), "block" (Qualtrics designation for groupings of items), and item. The elements that were randomized are identified in the following tables by randomized element (A, B, C, or D):
 
@@ -100,6 +100,27 @@ kable(cond3, caption = "Pilot administration ordering Condition 3")
  
 kable(cond4, caption = "Pilot administration ordering Condition 4")
 
+```
+
+## Geographic Constituency {#geo}
+
+As reported by Qualtrics' latitude and longitude estimates:
+
+```{r geo, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Geographic location of pilot sample respondents"}
+
+library(leaflet)
+
+data$`Location Longitude` <- as.numeric(as.character(data$`Location Longitude`))
+data$`Location Latitude` <- as.numeric(as.character(data$`Location Latitude`))
+
+## create leaflet map
+leaflet() %>% 
+  addProviderTiles("CartoDB.Positron") %>% 
+  setView(-98.35, 39.7,
+          zoom = 4) %>%
+  addTiles() %>%
+  addCircles(data=data, lng = ~`Location Longitude`, lat = ~`Location Latitude`, weight = 10)
+  
 ```
 
 # Correlations {#corrs}
