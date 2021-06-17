@@ -2,6 +2,8 @@ tab:conditions
 tab:cond2
 tab:cond3
 tab:cond4
+fig:pilotdate
+fig:pilotlatency
 fig:geo
 tab:rdrop1
 tab:rdrop2
@@ -52,6 +54,9 @@ february-24-2020
 structural-considerations
 summer-2020
 pilot2
+pilotdemo
+responsedate
+response-latencies
 geo
 corrs
 inter-item-correlations

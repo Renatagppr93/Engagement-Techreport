@@ -65,7 +65,7 @@ Definitions as of 5/19/2020:
 
 The development team "content validation" as well as the broader content validation to inform the pilot administration (see Chapter \@ref(CValid)) retained these definitions we ordered all the items according to the ones we individually selected for each category and created an item bank with the remaining items. Together we placed the items in the bank into the agreed upon categories. 
 
-# Pilot conditions and Geography {#pilot2}
+# Pilot conditions {#pilot2}
 
 Our four orderings of items were randomized within dimension (Affective, Behavioral, Cognitive or Dedication, Absorption, Vigor), "block" (Qualtrics designation for groupings of items), and item. The elements that were randomized are identified in the following tables by randomized element (A, B, C, or D):
 
@@ -102,9 +102,49 @@ kable(cond4, caption = "Pilot administration ordering Condition 4")
 
 ```
 
-## Geographic Constituency {#geo}
+# Pilot demographics {#pilotdemo}
 
-As reported by Qualtrics' latitude and longitude estimates:
+## Response date {#responsedate}
+
+As reported by Qualtrics' `Recorded Date` estimates:
+
+```{r pilotdate, echo=FALSE, warning=FALSE, fig.cap="Qualtrics recorded date of pilot survey response"}
+
+fordemo <- read.csv("qualtrics_pilot_data.csv", header=FALSE, na.strings="")
+
+y <- fordemo[2,]
+demo <- fordemo[-c(1:3),]
+colnames(demo) <- y
+
+demo$date <- substr(demo$`Recorded Date`, 1,10)
+demo$date <- as.Date(demo$date)
+
+library(ggplot2)
+
+ggplot(demo, aes(x=date)) + geom_histogram(binwidth=1) +
+  scale_x_date(labels = scales::date_format("%Y-%b"), breaks = seq(min(demo$date)-5, max(demo$date)+5, 30)) +
+  xlab("")
+
+```
+
+## Response latencies 
+
+As reported by Qualtrics' `Duration (in seconds)` variable:
+
+```{r pilotlatency, echo=FALSE, warning=FALSE, fig.cap="Qualtrics recorded response latencies (truncated for over 7000ms)"}
+
+
+demo$latency <- as.numeric(demo$`Duration (in seconds)`)
+demo$latency[demo$latency > 7000] <- NA
+
+ggplot(demo, aes(x=latency)) + geom_histogram() + xlab("")
+
+```
+
+
+## Geographic constituency {#geo}
+
+As reported by Qualtrics' `Location Latitude` and `Location Longitude` estimates:
 
 ```{r geo, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Geographic location of pilot sample respondents"}
 
