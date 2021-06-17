@@ -102,9 +102,7 @@ cor.plot<-ggplot(data=melted_cor, aes(Var1, Var2, fill=value))+
 
 
 library(plotly)
- ggplotly(cor.plot)
-
-
+ggplotly(cor.plot) ## trying frameWidget so plot renders better on phone (didn't work: 6/17/21)
 
 ```
 
