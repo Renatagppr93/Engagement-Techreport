@@ -9,7 +9,7 @@ beh.vig <- psych::alpha(together[,c(18:21)],check.keys = T)
 beh.ded <- psych::alpha(together[,c(22:25)],check.keys = T)
 
 cog.vig <- psych::alpha(together[,c(26:29)],check.keys = T)
-cog.ded <- psych::alpha(together[30:33],check.keys = T)
+cog.ded <- psych::alpha(together[,c(30:33)],check.keys = T)
 cog.abs <- psych::alpha(together[,c(34:37)],check.keys = T)
 
 aff.abs
@@ -83,7 +83,7 @@ psych::alpha(together[,c(23,25)],check.keys = T) # Ok
 psych::alpha(together[,c(24,25)],check.keys = T) # Good
 
 
-###### Cog-Vid
+###### Cog-Vig
 psych::alpha(together[,c(26,29)],check.keys = T) # Good
 psych::alpha(together[,c(27,29)],check.keys = T) # Good
 psych::alpha(together[,c(28,29)],check.keys = T) # Ok
@@ -91,7 +91,7 @@ psych::alpha(together[,c(27,28)],check.keys = T) # Ok
 psych::alpha(together[,c(27,29)],check.keys = T) # Good
 psych::alpha(together[,c(28,29)],check.keys = T) # Ok
 
-###### Cog-ded
+###### Cog-def
 psych::alpha(together[,c(30,31)],check.keys = T) # Good
 psych::alpha(together[,c(30,32)],check.keys = T) # Good
 psych::alpha(together[,c(30,33)],check.keys = T) # Ok
@@ -121,3 +121,27 @@ psych::alpha(together[,c(26,29,30,32,35,37)])
 
 ###### All together
 psych::alpha(together[,c(2,5,6,7,10,13,14,15,18,19,22,23,26,29,30,32,35,37)])
+
+
+#### CFA
+Bifactor_Model2<-'
+Cognitive=~Item_26+Item_29+Item_30+Item_32+Item_35+Item_37
+Affective=~Item_2+Item_5+Item_6+Item_7+Item_10+Item_13
+Behavioral=~Item_14+Item_15+Item_18+Item_19+Item_22+Item_23
+Absorption=~Item_2+Item_5+Item_14+Item_15+Item_35+Item_36
+Vigor=~Item_6+Item_7+Item_18+Item_19+Item_26+Item_29
+Dedication=~Item_10+Item_13+Item_22+Item_23+Item_35+Item_36
+Cognitive ~~ Affective
+Cognitive ~~ Behavioral
+Affective ~~ Behavioral
+Absorption ~~ Vigor
+Absorption ~~ Dedication
+Vigor ~~ Dedication'
+
+Fit.Bi <- lavaan::cfa(Bifactor_Model2, data = together, orthogonal=TRUE)
+
+semPlot::semPaths(Fit.Bi, bifactor = c("Cognitive", "Affective", "Behavioral"), "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)  ## exoCov=FALSE deletes all covariances
+title("Initial pilot bifactor analysis (36 candidate items)")
+
+summary(Fit.Bi)
