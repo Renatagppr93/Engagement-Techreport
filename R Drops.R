@@ -108,3 +108,16 @@ psych::alpha(together[,c(35,36)],check.keys = T) # Ok
 psych::alpha(together[,c(35,37)],check.keys = T) # Good
 psych::alpha(together[,c(36,37)],check.keys = T) # Bad
 
+
+
+###### Affective
+psych::alpha(together[,c(2,5,6,7,10,13)])
+
+###### Behavioral
+psych::alpha(together[,c(14,15,18,19,22,23)])
+
+###### Cognitive
+psych::alpha(together[,c(26,29,30,32,35,37)])
+
+###### All together
+psych::alpha(together[,c(2,5,6,7,10,13,14,15,18,19,22,23,26,29,30,32,35,37)])
