@@ -144,14 +144,14 @@ ggplot(demo, aes(x=latency)) + geom_histogram() + xlab("")
 
 ## Geographic constituency {#geo}
 
-As reported by Qualtrics' `Location Latitude` and `Location Longitude` estimates:
+As reported by Qualtrics' `Location Latitude` and `Location Longitude` estimates, rounded to one decimal place in consideration of pilot respondents' privacy:
 
 ```{r geo, echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Geographic location of pilot sample respondents"}
 
 library(leaflet)
 
-data$`Location Longitude` <- as.numeric(as.character(data$`Location Longitude`))
-data$`Location Latitude` <- as.numeric(as.character(data$`Location Latitude`))
+demo$`Location Longitude` <- round(as.numeric(as.character(demo$`Location Longitude`)),1)
+demo$`Location Latitude` <- round(as.numeric(as.character(demo$`Location Latitude`)),1)
 
 ## create leaflet map
 leaflet() %>% 
@@ -159,7 +159,7 @@ leaflet() %>%
   setView(-98.35, 39.7,
           zoom = 4) %>%
   addTiles() %>%
-  addCircles(data=data, lng = ~`Location Longitude`, lat = ~`Location Latitude`, weight = 10)
+  addCircles(data=demo, lng = ~`Location Longitude`, lat = ~`Location Latitude`, weight = 10)
   
 ```
 
