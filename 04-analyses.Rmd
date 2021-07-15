@@ -352,6 +352,10 @@ semPaths(fit2,"std", edge.label.cex = 0.5, curvePivot = TRUE, rotation=4)
 
 bifactor analysis are most commonly applied in the exploration of common method variance [see, for example, @reise_rediscovery_2012;  @rodriguez_evaluating_2016]. @giordano_exploratory_2020 provide an overview regarding past and potential applications of *exploratory* bifactor analysis and cite @reise_rediscovery_2012 as an influential impetus for the resurgence of bifactor models in general. 
 
+##### Final Scale Definitions
+
+Final scale definitions were informed by two sets of indices: 1) corrected item-total correlations, and 2) CFA modification indices. The CFA modification indices extracted from the initial 36-item scale definitions are located in Appendix \@ref(mods).
+
 ```{r bifactor, echo=FALSE, message=FALSE, warning=FALSE}
 
 ## Bifactor below (5/19/21):
