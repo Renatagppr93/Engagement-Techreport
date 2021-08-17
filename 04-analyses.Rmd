@@ -391,6 +391,7 @@ Deese guys also do bifactor stuff: @mansolf_when_2017
 
 #####Final Scale Definition (18 items Casey's item reduction method)
 ```{r bifactor, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
 Reduction_2Items<-together[,c(2,5,6,7,10,13,14,15,19,20,22,23,26,29,31,33,34,36)]
 
 Reduction_2Items<-Reduction_2Items%>%rename(
@@ -481,8 +482,6 @@ Fit.Bi3 <- lavaan::cfa(Bifactor_Model3, data = Reduction_2Items) #, likelihood =
 semPlot::semPaths(Fit.Bi3, bifactor = c("Cognitive", "Affective", "Behavioral"), "std", layout = "tree3", 
                   rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)  ## exoCov=FALSE deletes all covariances
 title("Initial pilot bifactor analysis (18 candidate items)")
-
-modindices(Fit.Bi3, sort = TRUE, maximum.number = 5)
 
 summary(Fit.Bi3)
 ```
