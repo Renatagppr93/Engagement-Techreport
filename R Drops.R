@@ -26,54 +26,54 @@ cog.ded
 
 # 3 items
 ####### Aff-Abs
-psych::alpha(together[,c(2,3,4)],check.keys = T) # Second Best
-psych::alpha(together[,c(2,3,5)],check.keys = T) # Third Best
-psych::alpha(together[,c(3,4,5)],check.keys = T) # Bad
+psych::alpha(together[,c(2,3,4)],check.keys = T) 
+psych::alpha(together[,c(2,3,5)],check.keys = T) 
+psych::alpha(together[,c(3,4,5)],check.keys = T) 
 
 
 ####### Aff-Vig
-psych::alpha(together[,c(6,7,9)],check.keys = T) # Best
-psych::alpha(together[,c(6,8,9)],check.keys = T) # Second Best
-psych::alpha(together[,c(7,8,9)],check.keys = T) # Bad
+psych::alpha(together[,c(6,7,9)],check.keys = T) 
+psych::alpha(together[,c(6,8,9)],check.keys = T) 
+psych::alpha(together[,c(7,8,9)],check.keys = T) 
 
 
 ####### Aff-Ded
-psych::alpha(together[,c(10,11,12)],check.keys = T) # Ok
-psych::alpha(together[,c(10,12,13)],check.keys = T) # Good
-psych::alpha(together[,c(11,12.13)],check.keys = T) # Good
+psych::alpha(together[,c(10,11,12)],check.keys = T) 
+psych::alpha(together[,c(10,12,13)],check.keys = T)
+psych::alpha(together[,c(11,12.13)],check.keys = T) 
 
 
 ###### Beh-Abs
-psych::alpha(together[,c(14,15,16)],check.keys = T) # Good
-psych::alpha(together[,c(14,16,17)],check.keys = T) # Bad
-psych::alpha(together[,c(15,16,17)],check.keys = T) # ok
+psych::alpha(together[,c(14,15,16)],check.keys = T) 
+psych::alpha(together[,c(14,16,17)],check.keys = T) 
+psych::alpha(together[,c(15,16,17)],check.keys = T)
 
 
 ###### Beh-vig
-psych::alpha(together[,c(18,19,20)],check.keys = T) # Good
-psych::alpha(together[,c(18,20,21)],check.keys = T) # Ok
-psych::alpha(together[,c(19,20,21)],check.keys = T) # Ehhh
+psych::alpha(together[,c(18,19,20)],check.keys = T)
+psych::alpha(together[,c(18,20,21)],check.keys = T) 
+psych::alpha(together[,c(19,20,21)],check.keys = T)
 
 ###### Bed-ded
-psych::alpha(together[,c(22,23,24)],check.keys = T) # Good
-psych::alpha(together[,c(22,24,25)],check.keys = T) # Bad
-psych::alpha(together[,c(23,24,25)],check.keys = T) # Ok
+psych::alpha(together[,c(22,23,24)],check.keys = T) 
+psych::alpha(together[,c(22,24,25)],check.keys = T) 
+psych::alpha(together[,c(23,24,25)],check.keys = T)
 
 
 ###### Cog-Vig
-psych::alpha(together[,c(26,27,28)],check.keys = T) # Good
-psych::alpha(together[,c(26,27,29)],check.keys = T) # Good
-psych::alpha(together[,c(27,28,29)],check.keys = T) # Ok
+psych::alpha(together[,c(26,27,28)],check.keys = T) 
+psych::alpha(together[,c(26,27,29)],check.keys = T) 
+psych::alpha(together[,c(27,28,29)],check.keys = T)
 
 ###### Cog-def
-psych::alpha(together[,c(30,31,32)],check.keys = T) # Good
-psych::alpha(together[,c(30,31.33)],check.keys = T) # Good
-psych::alpha(together[,c(31,32,33)],check.keys = T) # Ok
+psych::alpha(together[,c(30,31,32)],check.keys = T) 
+psych::alpha(together[,c(30,31.33)],check.keys = T) 
+psych::alpha(together[,c(31,32,33)],check.keys = T)
 
 ###### Cog-abs
-psych::alpha(together[,c(34,35,36)],check.keys = T) # Bad
-psych::alpha(together[,c(34,36,37)],check.keys = T) # Good
-psych::alpha(together[,c(35,36,37)],check.keys = T) # Ok
+psych::alpha(together[,c(34,35,36)],check.keys = T) 
+psych::alpha(together[,c(34,36,37)],check.keys = T)
+psych::alpha(together[,c(35,36,37)],check.keys = T) 
 
 
 
