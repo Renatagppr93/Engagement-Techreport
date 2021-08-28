@@ -343,10 +343,11 @@ Item reading level information was performed via the packages `quanteda` version
 
 ```{r quanteda, echo=FALSE, warning=FALSE, message=FALSE}
 library(quanteda)
-## library(quanteda.textstats)
+library(quanteda.textstats)
 
 data2 <- corpus(cond1, docid_field = "Condition1",
   text_field = "Condition1")
+
 
 tab2 <- textstat_readability(data2,
                      measure = c("Flesch.Kincaid", "Dale.Chall"))

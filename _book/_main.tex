@@ -114,7 +114,7 @@
 
 \title{Engagement Survey Technical Report}
 \author{Eagle I.O}
-\date{Most recently updated 2021-08-17}
+\date{Most recently updated 2021-08-28}
 
 \begin{document}
 \maketitle
@@ -131,7 +131,7 @@
 
 This is a report that documents the technical details regarding the development of the Eagle I.O Engagement survey.
 
-This report was written with \texttt{bookdown} \citep{R-bookdown} within \texttt{rMarkdown} \citep{R-markdown} using \texttt{R} version 4.1.0 \citep{R-base}.
+This report was written with \texttt{bookdown} \citep{R-bookdown} within \texttt{rMarkdown} \citep{R-markdown} using \texttt{R} version 4.1.1 \citep{R-base}.
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -307,7 +307,7 @@ These are to be included in future administrations in an attempt to develop mark
 \hypertarget{pilot-analyses-1}{%
 \section{Pilot analyses}\label{pilot-analyses-1}}
 
-282 people responded. We may want to further screen these 282 responses for short response durations. According to communications with Qualtrics in early December, this is the number of seconds to complete the entire survey. Currently, the ``number of people who clicked on the assessment link (330)'' versus valid \emph{n} (282) may take care of our very low duration respondents. The shortest response duration in the 330 datafile is 101 whereas the lowest in the 282 datafile is 43. All analyses were performed via \texttt{R} version R version 4.1.0 (2021-05-18) \citep{R-base}. Demographic consituency of the pilot sample is located in Appendix \ref{pilotdemo}.
+282 people responded. We may want to further screen these 282 responses for short response durations. According to communications with Qualtrics in early December, this is the number of seconds to complete the entire survey. Currently, the ``number of people who clicked on the assessment link (330)'' versus valid \emph{n} (282) may take care of our very low duration respondents. The shortest response duration in the 330 datafile is 101 whereas the lowest in the 282 datafile is 43. All analyses were performed via \texttt{R} version R version 4.1.1 (2021-08-10) \citep{R-base}. Demographic consituency of the pilot sample is located in Appendix \ref{pilotdemo}.
 
 \hypertarget{classical-test-theory}{%
 \subsection{Classical test theory}\label{classical-test-theory}}
@@ -988,8 +988,8 @@ Model & \(\chi^2\) & \emph{df} & RMSEA & SRMR & CFI & TLI & AIC \\
 \midrule
 \endhead
 3-factor substantive & 538.1 & 132 & 0.11 & 0.08 & 0.81 & 0.78 & 12990.04 \\
-3-factor attitudinal & & & & & & & \\
-Bi-factor model & & & & & & & \\
+3-factor attitudinal & 536.54 & 132 & 0.11 & 0.08 & 0.81 & 0.78 & 12988.47 \\
+Bi-factor model & 214.91 & 111 & 0.06 & 0.04 & 0.95 & 0.93 & 12708.85 \\
 \bottomrule
 \end{longtable}
 
@@ -4782,7 +4782,7 @@ This organization provides the resources necessary for me to successfully perfor
 \hypertarget{qualitative}{%
 \chapter{Qualitative item characteristics}\label{qualitative}}
 
-Item reading level information was performed via the packages \texttt{quanteda} version 3.0.0 \citep{R-quanteda} and \texttt{quanteda.textstats} version 0.94.1 \citep{R-quanteda.textstats} in R version 4.1.0 (2021-05-18) \citep{R-base}. Two indices were investigated: ``Flesch-Kincaid'' is the same grade level index that's currently used by Microsoft Word \citep{kincaid_derivation_1975} whereas ``Dale.Chall'' reflects \emph{N\textsubscript{wd}} {[}``difficulty'' of words; \citet{chall_dale_1995}{]}. These indices are primarily influenced by two qualitative characteristics: \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wf}}}, which is the number of words matching the Dale-Chall List of 3000 ``familiar words'', and \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wd}}}, which is the number of ``difficult'' words not matching the Dale-Chall list of ``familiar'' words.
+Item reading level information was performed via the packages \texttt{quanteda} version 3.1.0 \citep{R-quanteda} and \texttt{quanteda.textstats} version 0.94.1 \citep{R-quanteda.textstats} in R version 4.1.1 (2021-08-10) \citep{R-base}. Two indices were investigated: ``Flesch-Kincaid'' is the same grade level index that's currently used by Microsoft Word \citep{kincaid_derivation_1975} whereas ``Dale.Chall'' reflects \emph{N\textsubscript{wd}} {[}``difficulty'' of words; \citet{chall_dale_1995}{]}. These indices are primarily influenced by two qualitative characteristics: \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wf}}}, which is the number of words matching the Dale-Chall List of 3000 ``familiar words'', and \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wd}}}, which is the number of ``difficult'' words not matching the Dale-Chall list of ``familiar'' words.
 
 The average Flesch-Kincaied (e.g., reading grade) for our 36 candidate pilot items was 6.2 (\emph{sd} = 3.04). The average Dale-Chall index was 38.61 (\emph{sd} = 11.11).
 
