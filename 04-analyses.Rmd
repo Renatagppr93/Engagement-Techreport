@@ -350,7 +350,7 @@ semPaths(fit2,"std", edge.label.cex = 0.5, curvePivot = TRUE, rotation=4)
 
 #### Bifactor analyses
 
-bifactor analysis are most commonly applied in the exploration of common method variance [see, for example, @reise_rediscovery_2012;  @rodriguez_evaluating_2016]. @giordano_exploratory_2020 provide an overview regarding past and potential applications of *exploratory* bifactor analysis and cite @reise_rediscovery_2012 as an influential impetus for the resurgence of bifactor models in general. 
+bifactor analysis are most commonly applied in the exploration of common method variance [see, for example, @reise_rediscovery_2012;  @rodriguez_evaluating_2016]. @giordano_exploratory_2020 provide an overview regarding past and potential applications of *exploratory* bifactor analysis and cite @reise_rediscovery_2012 as an influential impetus for the resurgence of bifactor models in general. @canivez2016bifactor has a recent overview.
 
 ##### Final Scale Definitions
 

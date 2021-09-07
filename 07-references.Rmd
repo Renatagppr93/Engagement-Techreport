@@ -131,7 +131,7 @@ ggplot(demo, aes(x=date)) + geom_histogram(binwidth=1) +
 
 As reported by Qualtrics' `Duration (in seconds)` variable:
 
-```{r pilotlatency, echo=FALSE, warning=FALSE, fig.cap="Qualtrics recorded response latencies (truncated for over 7000ms)"}
+```{r pilotlatency, echo=FALSE, warning=FALSE, fig.cap="Qualtrics recorded response latencies (truncated for over 7000 seconds)"}
 
 
 demo$latency <- as.numeric(demo$`Duration (in seconds)`)
