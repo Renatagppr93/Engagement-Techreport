@@ -350,7 +350,7 @@ semPaths(fit2,"std", edge.label.cex = 0.5, curvePivot = TRUE, rotation=4)
 
 #### Bifactor analyses
 
-bifactor analysis are most commonly applied in the exploration of common method variance [see, for example, @reise_rediscovery_2012;  @rodriguez_evaluating_2016]. @giordano_exploratory_2020 provide an overview regarding past and potential applications of *exploratory* bifactor analysis and cite @reise_rediscovery_2012 as an influential impetus for the resurgence of bifactor models in general. @canivez2016bifactor has a recent overview.
+bifactor analysis are most commonly applied in the exploration of common method variance [see, for example, @reise_rediscovery_2012;  @rodriguez_evaluating_2016]. @giordano_exploratory_2020 provide an overview regarding past and potential applications of *exploratory* bifactor analysis and cite @reise_rediscovery_2012 as an influential impetus for the resurgence of bifactor models in general. @giordano2020recovering has a recent review of seven different bifactor model applications.
 
 ##### Final Scale Definitions
 
@@ -499,6 +499,9 @@ Fit.Bi3$rounded <- round(Fit.Bi3$`fitMeasures(Fit.Bi3)`, 2)
 | 3-factor attitudinal     |`r Fit1.5[3,2]`   |`r Fit1.5[4,2]`     |`r Fit1.5[23,2]` |`r Fit1.5[29,2]` |`r Fit1.5[9,2]` |`r Fit1.5[10,2]` |`r Fit1.5[19,2]`  |
 | Bi-factor model          |`r Fit.Bi3[3,2]`  |`r Fit.Bi3[4,2]`    |`r Fit.Bi3[23,2]`|`r Fit.Bi3[29,2]`|`r Fit.Bi3[9,2]`|`r Fit.Bi3[10,2]`|`r Fit.Bi3[19,2]` |
 
+#### Omega
+
+Omega reliability ($\omega$) estimates independent latent construct reliability absent the effect of other constructs.
 
 ### Summary
 
