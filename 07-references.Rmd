@@ -1,4 +1,7 @@
+
 # References
+
+![](books.jpg)
 
 <div id="refs"></div>
 
@@ -137,7 +140,8 @@ As reported by Qualtrics' `Duration (in seconds)` variable:
 demo$latency <- as.numeric(demo$`Duration (in seconds)`)
 demo$latency[demo$latency > 7000] <- NA
 
-ggplot(demo, aes(x=latency)) + geom_histogram() + xlab("")
+aaa <- ggplot(demo, aes(x=latency)) + geom_histogram() + xlab("")
+suppressMessages(print(aaa))                                         ## Workaround for package-dependent warning messages
 
 ```
 
