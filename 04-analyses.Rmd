@@ -380,85 +380,54 @@ title("Initial pilot bifactor analysis (36 candidate items)")
 
 ## Scale Reduction
 
-Final scale definitions were primarily informed by two sets of indices: 1) corrected item-total correlations, and 2) CFA modification indices. We approached these two procedures as competing item-reduction techniques rather than complementary indices - we did this with the forethought of presenting the competing finalized models within a research context (for example, SIOP). The initially computed corrected item-total correlations can be found in Appendix \@ref(rdrops). The CFA modification indices extracted from the initial 36-item scale definitions are located in Appendix \@ref(mods).
+Final scale definitions were primarily informed by two sets of indices: 1) corrected item-total correlations, and 2) CFA modification indices. We approached these two procedures as competing item-reduction techniques rather than complementary indices - we did this with the forethought of presenting the competing finalized models within a research context (for example, [SIOP](www.siop.org)). The initially computed corrected item-total correlations can be found in Appendix \@ref(rdrops). The CFA modification indices extracted from the initial 36-item scale definitions are located in Appendix \@ref(mods).
 
 ### Corrected item-total informed scale definitions
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-Reduction_2Items<-together[,c(2,5,6,7,10,13,14,15,19,20,22,23,26,29,31,33,34,36)]
+### Modification index-informed scale definitions
 
-Reduction_2Items<-Reduction_2Items%>%rename(
-  Item_1=`Iâ€™m able to concentrate on my work without distractions.`,
- # Item_2=`I have a hard time detaching mentally from my work.`,
-  Item_3=`Time passes quickly while Iâ€™m working.`,
- # Item_4=`I find it difficult to mentally disconnect from work.`,
-  Item_5=`I enjoy thinking about work even when Iâ€™m not at work.`,
- # Item_6=`Most days, I feel happiest when the workday is soon to be complete.`,
- # Item_7=`I am happiest when I am immersed in a project.`,
-  Item_8=`I love starting my workday.`,
-  Item_9=`I devote more time than is expected of me.`,
-  Item_10=`I have to be reminded to take breaks while Iâ€™m at work.`,
- # Item_11=`I never miss a work deadline.`,
- # Item_12=`I never allow distractions to interfere with my work.`,
-  Item_13=`I devote my full attention to my work tasks throughout the day.`,
- # Item_14=`Thinking about work saps my energy.`,
- # Item_15=`I would rather direct my focus toward a work task than a personal task.`,
-  Item_16=`Iâ€™m able to maintain good levels of energy throughout the workday.`,
-  Item_17=`I enjoy spending time completing my job tasks.`,
-  Item_18=`Most days I feel enthusiastic about starting my work day.`,
- # Item_19=`I feel motivated to go beyond what is asked of me.`,
- # Item_20=`This job drains my energy.`,
- # Item_21=`When work is slow I find ways to be productive.`,
-  Item_22=`I express enthusiasm for my job while at work.`,
-  Item_23=`I try my best to perform well at work.`,
- # Item_24=`If I notice my energy level is low, I take corrective steps to re-energize.`,
- # Item_25=`I plan my future with this company.`,
-  Item_26=`I believe this company cares about my career goals.`,
- # Item_27=`I often think about finding another job.`,
-  Item_28=`This organization challenges me to work at my full potential.`,
-  Item_29=`I am proud to be a member of this organization.`,
- # Item_30=`I feel supported by my supervisor when I fail at a task.`,
- # Item_31=`I feel proud of my accomplishments within this organization.`,
-  Item_32=`My job makes me feel like Iâ€™m part of something meaningful.`,
-  Item_33=`I make valued contributions to the organization.`,
-  Item_34=`I embrace challenging situations at work.`,
- # Item_35=`I speak positively about this organization to others.`,
- # Item_36=`This organization provides the resources necessary for me to successfully perform my job.`
-)
+Scale reduction was performed from 36 to 22 items using modification indices from the two independent models. For example, if modification indices implicated residual covariances between substantive model indicators, and these indicators were furthermore potentially explained by the items both being, for example, "Affective", then those items were retained. Similarly, if modification indices from the attitudinal model CFA implicated residual item covariances, and these items were associated via the substantive model, those two items were given preference for retention. This process became less instructive after the reduction of 14 items. The goal of the assessment was a finalized 18 (6 per dimension and 2 per dimensional "intersection"), so we prioritized empirial factor loadings (from both substantive and attitudinal models) for the final 4 item reductions. This resulted in two possible final scale definitions: one giving "priority" to the attitudinal model, and one giving "priority" to information extracted from the substantive model.
 
+```{r CFAmod, warning=FALSE, echo=FALSE, message=FALSE}
 
+library(lavaan)
+library(sem)
+library(semPlot)
+library(dplyr)
 
-Sub_Model_ItemReduction2<-'
-Absorption=~Item_1+Item_3+Item_5++Item_8+Item_9+Item_10
-Vigor=~Item_13+Item_16+Item_17+Item_18+Item_22+Item_23
-Dedication=~Item_26+Item_28+Item_29+Item_32+Item_33+Item_34
+#iteration 3 cutting item 24 + 36 (vigor behavioral)
+Att_Model<-'
+Cognitive=~Item_1+Item_3+Item_15+Item_16+Item_26+Item_28
+Affective=~Item_5+Item_8+Item_17+Item_19+Item_31+Item_32
+Behavioral=~Item_10+Item_11+Item_21+Item_22+Item_34+Item_35
+'
+Final1.1<-lavaan::cfa(Att_Model, data = CFAdata)
+
+semPlot::semPaths(Final1.1, "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
+
+## Final2.2
+
+Sub_Model<-'
+Absorption=~Item_1+Item_3+Item_5+Item_8+Item_10+Item_11
+Vigor=~Item_15+Item_16+Item_17+Item_19+Item_21+Item_22
+Dedication=~Item_26+Item_28+Item_31+Item_32+Item_34+Item_35
 '
 
-Fit1.4<-lavaan::cfa(Sub_Model_ItemReduction2, data = Reduction_2Items)
-semPlot::semPaths(Fit1.4,"std")
-#lavaan::fitMeasures(Fit1.4)
-#summary(Fit1.4, fit.measure=TRUE)
+Final1.2<-lavaan::cfa(Sub_Model, data = CFAdata)
 
-Att_Model_ItemReduction2<-'
-Cognitive=~Item_1+Item_3+Item_13+Item_16+Item_26+Item_28
-Affective=~Item_5+Item_8+Item_17+Item_18+Item_29+Item_32
-Behavioral=~Item_9+Item_10+Item_22+Item_23+Item_33+Item_34
-'
-Fit1.5<-lavaan::cfa(Att_Model_ItemReduction2, data = Reduction_2Items)
-semPlot::semPaths(Fit1.5,"std")
-#lavaan::fitMeasures(Fit1.5)
-#summary(Fit1.5, fit.measure=TRUE)
+semPlot::semPaths(Final1.2, "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
 
+## Final2.1
 
-#### Bifactor model 2 items
-Bifactor_Model3<-'
-Cognitive=~Item_1+Item_3+Item_13+Item_16+Item_26+Item_28
-Affective=~Item_5+Item_8+Item_17+Item_18+Item_29+Item_32
-Behavioral=~Item_9+Item_10+Item_22+Item_23+Item_33+Item_34
-Absorption=~Item_1+Item_3+Item_5++Item_8+Item_9+Item_10
-Vigor=~Item_13+Item_16+Item_17+Item_18+Item_22+Item_23
-Dedication=~Item_26+Item_28+Item_29+Item_32+Item_33+Item_34
+modified1 <-'
+Absorption=~Item_1+Item_3+Item_5+Item_8+Item_10+Item_11
+Vigor=~Item_15+Item_16+Item_17+Item_19+Item_21+Item_22
+Dedication=~Item_26+Item_28+Item_31+Item_32+Item_34+Item_35
+Cognitive=~Item_1+Item_3+Item_15+Item_16+Item_26+Item_28
+Affective=~Item_5+Item_8+Item_17+Item_19+Item_31+Item_32
+Behavioral=~Item_10+Item_11+Item_21+Item_22+Item_34+Item_35
 Absorption ~~ 0*Affective
 Absorption ~~ 0*Behavioral
 Absorption ~~ 0*Cognitive
@@ -470,30 +439,88 @@ Dedication ~~ 0*Behavioral
 Dedication ~~ 0*Cognitive
 '
 
+Final.mod1 <- lavaan::cfa(modified1, data = CFAdata, missing = 'ML', estimator = 'MLR') # used FIML but don't really know why it worked so well
 
-Fit.Bi3 <- lavaan::cfa(Bifactor_Model3, data = Reduction_2Items) #, likelihood = "wishart")
+semPlot::semPaths(Final.mod1, bifactor = c("Cognitive", "Affective", "Behavioral"), "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0) # , edge.label.cex = 1.5, pastel=TRUE) 
 
-semPlot::semPaths(Fit.Bi3, bifactor = c("Cognitive", "Affective", "Behavioral"), "std", layout = "tree3", 
-                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)  ## exoCov=FALSE deletes all covariances
-title("Initial pilot bifactor analysis (18 candidate items)")
 
-#summary(Fit.Bi3)
+#########################################################################
+########################SUBSTANTIVE######################################
+#########################################################################
 
-Fit1.4<-as.data.frame(fitMeasures(Fit1.4))
-Fit1.4$rounded <- round(Fit1.4$`fitMeasures(Fit1.4)`, 2)
-Fit1.5<-as.data.frame(fitMeasures(Fit1.5))
-Fit1.5$rounded <- round(Fit1.5$`fitMeasures(Fit1.5)`, 2)
-Fit.Bi3<-as.data.frame(fitMeasures(Fit.Bi3))
-Fit.Bi3$rounded <- round(Fit.Bi3$`fitMeasures(Fit.Bi3)`, 2)
+#the above model was arrived at by starting with the attitudinal model and later adding substantive. The following starts with substantive and works the other way
+
+Sub_Model<-'
+Absorption=~Item_2+Item_3+Item_7+Item_8+Item_10+Item_11
+Vigor=~Item_14+Item_16+Item_17+Item_19+Item_21+Item_22
+Dedication=~Item_26+Item_28+Item_31+Item_32+Item_34+Item_35
+'
+
+Final2.1<-lavaan::cfa(Sub_Model, data = CFAdata, missing = 'ML', estimator = 'MLR')
+
+semPlot::semPaths(Final2.1, "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
+
+#trying these items in the attitudinal model
+
+Att_Model <-'
+Cognitive=~Item_1+Item_3+Item_15+Item_16+Item_26+Item_28
+Affective=~Item_5+Item_8+Item_17+Item_19+Item_31+Item_32
+Behavioral=~Item_10+Item_11+Item_21+Item_22+Item_34+Item_36
+'
+
+Final2.2 <- lavaan::cfa(Att_Model, data = CFAdata, missing = 'ML', estimator = 'MLR')
+
+semPlot::semPaths(Final2.2, "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0)
+
+#trying these items with the bifactor model
+
+modified2 <-'
+Absorption=~Item_1+Item_3+Item_5+Item_8+Item_10+Item_11
+Vigor=~Item_15+Item_16+Item_17+Item_19+Item_21+Item_22
+Dedication=~Item_26+Item_28+Item_31+Item_32+Item_34+Item_35
+Cognitive=~Item_1+Item_3+Item_15+Item_16+Item_26+Item_28
+Affective=~Item_5+Item_8+Item_17+Item_19+Item_31+Item_32
+Behavioral=~Item_10+Item_11+Item_21+Item_22+Item_34+Item_36
+Absorption ~~ 0*Affective
+Absorption ~~ 0*Behavioral
+Absorption ~~ 0*Cognitive
+Vigor ~~ 0*Affective
+Vigor ~~ 0*Behavioral
+Vigor ~~ 0*Cognitive
+'
+
+Final.mod2 <- lavaan::cfa(modified2, data = CFAdata, missing = 'ML', estimator = 'MLR')
+
+semPlot::semPaths(Final.mod2, bifactor = c("Cognitive", "Affective", "Behavioral"), "std", layout = "tree3", 
+                  rotation = 2, curvePivot=TRUE, style="lisrel", nCharNodes = 0) #, edge.label.cex = 1.5, pastel=TRUE) 
+
+Final1.1 <- as.data.frame(fitMeasures(Final1.1))
+Final1.2 <- as.data.frame(fitMeasures(Final1.2))
+Final2.1 <- as.data.frame(fitMeasures(Final2.1))
+Final2.2 <- as.data.frame(fitMeasures(Final2.2))
+#Final.mod1 <- as.data.frame(fitMeasures(Final.mod1))
+Final.mod2 <- as.data.frame(fitMeasures(Final.mod2))
+
+Final1.1$rounded <- round(Final1.1$`fitMeasures(Final1.1)`, 2)
+Final1.2$rounded <- round(Final1.2$`fitMeasures(Final1.2)`, 2)
+Final2.1$rounded <- round(Final2.1$`fitMeasures(Final2.1)`, 2)
+Final2.2$rounded <- round(Final2.2$`fitMeasures(Final2.2)`, 2)
+#Final.mod1$rounded <- round(Final.mod1$`fitMeasures(Final.mod1)`, 2)
+Final.mod2$rounded <- round(Final.mod2$`fitMeasures(Final.mod2)`, 2)
+
+# | bifactor (att priority)   |`r Final.mod1[3,2]`|`r Final.mod1[4,2]`|`r Final.mod1[23,2]`|`r Final.mod1[29,2]`|`r Final.mod1[9,2]`|`r Final.mod1[10,2]`|`r Final.mod1[19,2]`|
 ```
 
-| Model                    | $\chi^2$         | *df*               | RMSEA           | SRMR            | CFI            | TLI             | AIC              | 
-|--------------------------|------------------|--------------------|-----------------|-----------------|----------------|-----------------|------------------|
-| 3-factor substantive     |`r Fit1.4[3,2]`   |`r Fit1.4[4,2]`     |`r Fit1.4[23,2]` |`r Fit1.4[29,2]` |`r Fit1.4[9,2]` |`r Fit1.4[10,2]` |`r Fit1.4[19,2]`  |
-| 3-factor attitudinal     |`r Fit1.5[3,2]`   |`r Fit1.5[4,2]`     |`r Fit1.5[23,2]` |`r Fit1.5[29,2]` |`r Fit1.5[9,2]` |`r Fit1.5[10,2]` |`r Fit1.5[19,2]`  |
-| Bi-factor model          |`r Fit.Bi3[3,2]`  |`r Fit.Bi3[4,2]`    |`r Fit.Bi3[23,2]`|`r Fit.Bi3[29,2]`|`r Fit.Bi3[9,2]`|`r Fit.Bi3[10,2]`|`r Fit.Bi3[19,2]` |
-
-### Modification index-informed scale definitions
+| 18-Item Model             | $\chi^2$          | *df*              | RMSEA              | SRMR               | CFI               | TLI                | AIC                |  
+|---------------------------|-------------------|-------------------|--------------------|--------------------|-------------------|--------------------|--------------------|
+| substantive (att priority)|`r Final1.1[3,2]`  |`r Final1.1[4,2]`  |`r Final1.1[23,2]`  |`r Final1.1[29,2]`  |`r Final1.1[9,2]`  |`r Final1.1[10,2]`  |`r Final1.1[19,2]`  |
+| attitudinal (att priority)|`r Final1.2[3,2]`  |`r Final1.2[4,2]`  |`r Final1.2[23,2]`  |`r Final1.2[29,2]`  |`r Final1.2[9,2]`  |`r Final1.2[10,2]`  |`r Final1.2[19,2]`  |
+| substantive (sub priority)|`r Final2.1[3,2]`  |`r Final2.1[4,2]`  |`r Final2.1[23,2]`  |`r Final2.1[29,2]`  |`r Final2.1[9,2]`  |`r Final2.1[10,2]`  |`r Final2.1[19,2]`  |
+| attitudinal (sub priority)|`r Final2.2[3,2]`  |`r Final2.2[4,2]`  |`r Final2.2[23,2]`  |`r Final2.2[29,2]`  |`r Final2.2[9,2]`  |`r Final2.2[10,2]`  |`r Final2.2[19,2]`  |
+| bifactor (sub priority)   |`r Final.mod2[3,2]`|`r Final.mod2[4,2]`|`r Final.mod2[23,2]`|`r Final.mod2[29,2]`|`r Final.mod2[9,2]`|`r Final.mod2[10,2]`|`r Final.mod2[19,2]`|
 
 ## Final proposed structure
 
@@ -515,4 +542,6 @@ Recommendation for final instrument based on consideration of all of the above p
 
 ![](correlation.jpg)
 
-Use Gallup for construct validation [@thackray_gallup_2005; @harter_relationship_2013]. Also the Utrecht Work Engagement Scale [UWES; @schaufeli_measurement_2002; @schaufeli_defining_2010]
+For convergent validity indices, we administered the 17-item Utrecht Work Engagement Scale [UWES; @schaufeli_measurement_2002; @schaufeli_defining_2010] as well as the @saks2006antecedents 12-item scale which aggregates to two scales: job and organizational engagement. [^gsux]
+
+[^gsux]: We had intended to use the Gallup "Q12" for construct validation [@thackray_gallup_2005; @harter_relationship_2013], but Gallup was not willing to share item- or person-level data.

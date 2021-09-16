@@ -90,7 +90,7 @@
 
 \title{Engagement Survey Technical Report}
 \author{Eagle I.O}
-\date{Most recently updated 2021-09-09}
+\date{Most recently updated 2021-09-16}
 
 \begin{document}
 \maketitle
@@ -290,7 +290,7 @@ These are to be included in future administrations in an attempt to develop mark
 
 In addition to the below interactive plot \citep[via \texttt{plotly} version 4.9.2.1;][]{R-plotly}, a full inter-item correlation matrix is located in Appendix \ref{corrs}.
 
-\hypertarget{htmlwidget-d8ce6266807270a52c13}{}
+\hypertarget{htmlwidget-14482678bf6f1e6a640e}{}
 
 \begin{verbatim}
 ## Some items ( I find it difficult to mentally disconnect from work. ) were negatively correlated with the total scale and 
@@ -371,26 +371,30 @@ Note. The bifactor model did not actually converge, so no fit indices are availa
 \hypertarget{scale-reduction}{%
 \section{Scale Reduction}\label{scale-reduction}}
 
-Final scale definitions were primarily informed by two sets of indices: 1) corrected item-total correlations, and 2) CFA modification indices. We approached these two procedures as competing item-reduction techniques rather than complementary indices - we did this with the forethought of presenting the competing finalized models within a research context (for example, SIOP). The initially computed corrected item-total correlations can be found in Appendix \ref{rdrops}. The CFA modification indices extracted from the initial 36-item scale definitions are located in Appendix \ref{mods}.
+Final scale definitions were primarily informed by two sets of indices: 1) corrected item-total correlations, and 2) CFA modification indices. We approached these two procedures as competing item-reduction techniques rather than complementary indices - we did this with the forethought of presenting the competing finalized models within a research context (for example, \href{www.siop.org}{SIOP}). The initially computed corrected item-total correlations can be found in Appendix \ref{rdrops}. The CFA modification indices extracted from the initial 36-item scale definitions are located in Appendix \ref{mods}.
 
 \hypertarget{corrected-item-total-informed-scale-definitions}{%
 \subsection{Corrected item-total informed scale definitions}\label{corrected-item-total-informed-scale-definitions}}
 
-\includegraphics{_main_files/figure-latex/unnamed-chunk-1-1.pdf} \includegraphics{_main_files/figure-latex/unnamed-chunk-1-2.pdf} \includegraphics{_main_files/figure-latex/unnamed-chunk-1-3.pdf}
+\hypertarget{modification-index-informed-scale-definitions}{%
+\subsection{Modification index-informed scale definitions}\label{modification-index-informed-scale-definitions}}
+
+Scale reduction was performed from 36 to 22 items using modification indices from the two independent models. For example, if modification indices implicated residual covariances between substantive model indicators, and these indicators were furthermore potentially explained by the items both being, for example, ``Affective'', then those items were retained. Similarly, if modification indices from the attitudinal model CFA implicated residual item covariances, and these items were associated via the substantive model, those two items were given preference for retention. This process became less instructive after the reduction of 14 items. The goal of the assessment was a finalized 18 (6 per dimension and 2 per dimensional ``intersection''), so we prioritized empirial factor loadings (from both substantive and attitudinal models) for the final 4 item reductions. This resulted in two possible final scale definitions: one giving ``priority'' to the attitudinal model, and one giving ``priority'' to information extracted from the substantive model.
+
+\includegraphics{_main_files/figure-latex/CFAmod-1.pdf} \includegraphics{_main_files/figure-latex/CFAmod-2.pdf} \includegraphics{_main_files/figure-latex/CFAmod-3.pdf} \includegraphics{_main_files/figure-latex/CFAmod-4.pdf} \includegraphics{_main_files/figure-latex/CFAmod-5.pdf} \includegraphics{_main_files/figure-latex/CFAmod-6.pdf}
 
 \begin{longtable}[]{@{}llllllll@{}}
 \toprule
-Model & \(\chi^2\) & \emph{df} & RMSEA & SRMR & CFI & TLI & AIC\tabularnewline
+18-Item Model & \(\chi^2\) & \emph{df} & RMSEA & SRMR & CFI & TLI & AIC\tabularnewline
 \midrule
 \endhead
-3-factor substantive & 538.1 & 132 & 0.11 & 0.08 & 0.81 & 0.78 & 12990.04\tabularnewline
-3-factor attitudinal & 536.54 & 132 & 0.11 & 0.08 & 0.81 & 0.78 & 12988.47\tabularnewline
-Bi-factor model & 214.91 & 111 & 0.06 & 0.04 & 0.95 & 0.93 & 12708.85\tabularnewline
+substantive (att priority) & 430.47 & 132 & 0.09 & 0.07 & 0.84 & 0.81 & 13467.84\tabularnewline
+attitudinal (att priority) & 396.01 & 132 & 0.09 & 0.06 & 0.85 & 0.83 & 13433.39\tabularnewline
+substantive (sub priority) & 460.61 & 132 & 0.83 & 0.8 & 1.21 & 2037.41 & 0.8\tabularnewline
+attitudinal (sub priority) & 447.7 & 132 & 0.83 & 0.8 & 1.19 & 1943.27 & 0.8\tabularnewline
+bifactor (sub priority) & 336.58 & 126 & 0.9 & 0.84 & 1.1 & 2166.23 & 0.86\tabularnewline
 \bottomrule
 \end{longtable}
-
-\hypertarget{modification-index-informed-scale-definitions}{%
-\subsection{Modification index-informed scale definitions}\label{modification-index-informed-scale-definitions}}
 
 \hypertarget{final-proposed-structure}{%
 \section{Final proposed structure}\label{final-proposed-structure}}
@@ -421,7 +425,7 @@ Recommendation for final instrument based on consideration of all of the above p
 
 \includegraphics{correlation.jpg}
 
-Use Gallup for construct validation \citep{thackray_gallup_2005, harter_relationship_2013}. Also the Utrecht Work Engagement Scale \citep[UWES;][]{schaufeli_measurement_2002, schaufeli_defining_2010}
+For convergent validity indices, we administered the 17-item Utrecht Work Engagement Scale \citep[UWES;][]{schaufeli_measurement_2002, schaufeli_defining_2010} as well as the \citet{saks2006antecedents} 12-item scale which aggregates to two scales: job and organizational engagement. \footnote{We had intended to use the Gallup ``Q12'' for construct validation \citep{thackray_gallup_2005, harter_relationship_2013}, but Gallup was not willing to share item- or person-level data.}
 
 \hypertarget{future-plans}{%
 \chapter{Future plans}\label{future-plans}}
@@ -1036,7 +1040,7 @@ As reported by Qualtrics' \texttt{Duration\ (in\ seconds)} variable:
 
 As reported by Qualtrics' \texttt{Location\ Latitude} and \texttt{Location\ Longitude} estimates, rounded to one decimal place in consideration of pilot respondents' privacy:
 
-\hypertarget{htmlwidget-55f46d11cf14c564a96b}{}
+\hypertarget{htmlwidget-ef1399513e204443314e}{}
 
 \label{fig:geo}Geographic location of pilot sample respondents
 
@@ -3790,12 +3794,12 @@ Because of the large inter-construct covariance estimates, we constructed standa
 \hypertarget{substantive-scales}{%
 \subsection{Substantive scales}\label{substantive-scales}}
 
-\hypertarget{htmlwidget-fcd36659c74fd883ea47}{}
+\hypertarget{htmlwidget-9c5406948cf81151bd65}{}
 
 \hypertarget{attitudinal-scales}{%
 \subsection{Attitudinal scales}\label{attitudinal-scales}}
 
-\hypertarget{htmlwidget-ac620ff53d6f167d6824}{}
+\hypertarget{htmlwidget-5e295f4b0072bf8acbae}{}
 
 \hypertarget{section}{%
 \section*{}\label{section}}
@@ -4387,7 +4391,7 @@ The average Flesch-Kincaied (e.g., reading grade) for our 36 candidate pilot ite
 
 Initial CFA modification indices (top 700 reported; 36-item specification):
 
-\hypertarget{htmlwidget-ad115bb499a032b59d24}{}
+\hypertarget{htmlwidget-91bd470222610ca701b7}{}
 
   \bibliography{book.bib,engage.bib,packages.bib,bifactor.bib}
 
