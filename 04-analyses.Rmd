@@ -546,6 +546,6 @@ For convergent validity indices, we administered the 17-item Utrecht Work Engage
 
 The English version of the UWES may actually be a translation (difficult to say for sure, however, as the test manual describes an original Dutch sample although the manual is written in English), and some items have odd grammar (for example, "I am proud on the work that I do"). 
 
-Two short scales from the Oregon Avocational Interest Scales (ORAIS) were retained for discriminant validitation - [the 5-item "Pets" and 6-item "Sports" scales](https://ipip.ori.org/newORAISKey.htm#Food-Related) were administered
+Two short scales from the Oregon Avocational Interest Scales [ORAIS; @goldberg2010personality] were retained for discriminant validitation - [the 5-item "Pets" and 5-item "Game-Playing" scales](https://ipip.ori.org/newORAISKey.htm#Food-Related) were administered
 
 [^gsux]: We had intended to use the Gallup "Q12" for construct validation [@thackray_gallup_2005; @harter_relationship_2013], but Gallup was not willing to share item- or person-level data.
