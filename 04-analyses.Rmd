@@ -514,13 +514,13 @@ Final.mod2$rounded <- round(Final.mod2$`fitMeasures(Final.mod2)`, 2)
 # | bifactor (att priority)   |`r Final.mod1[3,2]`|`r Final.mod1[4,2]`|`r Final.mod1[23,2]`|`r Final.mod1[29,2]`|`r Final.mod1[9,2]`|`r Final.mod1[10,2]`|`r Final.mod1[19,2]`|
 ```
 
-| 18-Item Model             | $\chi^2$          | *df*              | RMSEA              | SRMR               | CFI               | TLI                | AIC                |  
-|---------------------------|-------------------|-------------------|--------------------|--------------------|-------------------|--------------------|--------------------|
-| substantive (att priority)|`r Final1.1[3,2]`  |`r Final1.1[4,2]`  |`r Final1.1[23,2]`  |`r Final1.1[29,2]`  |`r Final1.1[9,2]`  |`r Final1.1[10,2]`  |`r Final1.1[19,2]`  |
-| attitudinal (att priority)|`r Final1.2[3,2]`  |`r Final1.2[4,2]`  |`r Final1.2[23,2]`  |`r Final1.2[29,2]`  |`r Final1.2[9,2]`  |`r Final1.2[10,2]`  |`r Final1.2[19,2]`  |
-| substantive (sub priority)|`r Final2.1[3,2]`  |`r Final2.1[4,2]`  |`r Final2.1[23,2]`  |`r Final2.1[29,2]`  |`r Final2.1[9,2]`  |`r Final2.1[10,2]`  |`r Final2.1[19,2]`  |
-| attitudinal (sub priority)|`r Final2.2[3,2]`  |`r Final2.2[4,2]`  |`r Final2.2[23,2]`  |`r Final2.2[29,2]`  |`r Final2.2[9,2]`  |`r Final2.2[10,2]`  |`r Final2.2[19,2]`  |
-| bifactor (sub priority)   |`r Final.mod2[3,2]`|`r Final.mod2[4,2]`|`r Final.mod2[23,2]`|`r Final.mod2[29,2]`|`r Final.mod2[9,2]`|`r Final.mod2[10,2]`|`r Final.mod2[19,2]`|
+| 18-Item Model             | $\chi^2$          | *df*              | RMSEA              | SRMR               | CFI                | TLI                | AIC                |  
+|---------------------------|-------------------|-------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+| substantive (att priority)|`r Final1.1[3,2]`  |`r Final1.1[4,2]`  |`r Final1.1[23,2]`  |`r Final1.1[29,2]`  |`r Final1.1[9,2]`   |`r Final1.1[10,2]`  |`r Final1.1[19,2]`  |
+| attitudinal (att priority)|`r Final1.2[3,2]`  |`r Final1.2[4,2]`  |`r Final1.2[23,2]`  |`r Final1.2[29,2]`  |`r Final1.2[9,2]`   |`r Final1.2[10,2]`  |`r Final1.2[19,2]`  |
+| substantive (sub priority)|`r Final2.1[3,2]`  |`r Final2.1[4,2]`  |`r Final2.1[44,2]`  |`r Final2.1[58,2]`  |`r Final2.1[17,2]`  |`r Final2.1[18,2]`  |`r Final2.1[38,2]`  |
+| attitudinal (sub priority)|`r Final2.2[3,2]`  |`r Final2.2[4,2]`  |`r Final2.2[44,2]`  |`r Final2.2[58,2]`  |`r Final2.2[17,2]`  |`r Final2.2[18,2]`  |`r Final2.2[38,2]`  |
+| bifactor (sub priority)   |`r Final.mod2[3,2]`|`r Final.mod2[4,2]`|`r Final.mod2[44,2]`|`r Final.mod2[58,2]`|`r Final.mod2[17,2]`|`r Final.mod2[18,2]`|`r Final.mod2[38,2]`|
 
 ## Final proposed structure
 
