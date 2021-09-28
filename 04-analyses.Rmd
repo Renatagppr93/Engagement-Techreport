@@ -538,14 +538,48 @@ Omega reliability ($\omega$) estimates independent latent construct reliability 
 
 Recommendation for final instrument based on consideration of all of the above pieces of evidence
 
-# Analyses (Construct and Criterion-related Validation)
+# Analyses (Construct Validation)
 
 ![](correlation.jpg)
 
+## Post-pilot administration modifications
+
+Because the bifactor analyses resulted in some equivocation regarding final scale definitions, we entered into construct validation with some flexibility regarding final scale definitions. Twenty items were retained for construct validation, with the intent of further reducing the instrument to our desired 18 items upon psychometric evaluation of records obtained from this second round of data collection. Furthermore, four pilot items were lightly revised for grammatical considerations:  
+
+Pilot administration:
+
++ Item 1 (Pilot): `I'm able to concentrate on my work without distractions` 
++ Item 19 (Pilot): `I feel motivated to go beyond what is asked of me` 
++ Item 25 (Pilot): `I plan my future with this company` 
+  
+  
+Construct validation administration: 
+
++ Item 1 (Revised): `I am able to concentrate on my work without getting distracted`
++ Item 19 (Revised): `I feel motivated to go beyond what is asked of me at work`
++ Item 25 (Revised): `I plan to stay with this company as my career advances`
+
+Slight modification was also made to the response scale - the middle-most pilot administration options of "Slightly Disagree" and "Slightly Agree" had their semantic modifiers changed to "Somewhat". The response scale offered in the construct validation was therefore:  
+
++ Strongly Disagree
++ Disagree
++ Somewhat Disagree
++ Somewhat Agree
++ Agree
++ Strongly Agree
+
+## Procedure
+
 For convergent validity indices, we administered the 17-item Utrecht Work Engagement Scale [UWES; @schaufeli_measurement_2002; @schaufeli_defining_2010] as well as the @saks2006antecedents 12-item scale which aggregates to two scales: job and organizational engagement [see also @saks2019antecedents]. [^gsux]
+
+[^gsux]: We had intended to use the Gallup "Q12" for construct validation [@thackray_gallup_2005; @harter_relationship_2013], but Gallup was not willing to share item- or person-level data.
 
 The English version of the UWES may actually be a translation (difficult to say for sure, however, as the test manual describes an original Dutch sample although the manual is written in English), and some items have odd grammar (for example, "I am proud on the work that I do"). 
 
-Two short scales from the Oregon Avocational Interest Scales [ORAIS; @goldberg2010personality] were retained for discriminant validitation - [the 5-item "Pets" and 5-item "Game-Playing" scales](https://ipip.ori.org/newORAISKey.htm#Food-Related) were administered
+Two short scales from the Oregon Avocational Interest Scales [ORAIS; @goldberg2010personality] were retained for discriminant validitation - [the 5-item "Pets" and 5-item "Game-Playing" scales](https://ipip.ori.org/newORAISKey.htm#Food-Related) were administered.
 
-[^gsux]: We had intended to use the Gallup "Q12" for construct validation [@thackray_gallup_2005; @harter_relationship_2013], but Gallup was not willing to share item- or person-level data.
+### Respondents
+
+
+
+
