@@ -44,10 +44,13 @@ final-proposed-structure
 omega
 multigroup-analyses
 summary
-analyses-construct-validation
+analyses-construct-criterion-validation
 post-pilot-administration-modifications
 procedure-1
-respondents
+section
+section-1
+construct-validation
+criterion-related-validation
 future-plans
 things-to-do
 research-projects

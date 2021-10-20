@@ -538,7 +538,7 @@ Omega reliability ($\omega$) estimates independent latent construct reliability 
 
 Recommendation for final instrument based on consideration of all of the above pieces of evidence
 
-# Analyses (Construct Validation)
+# Analyses (Construct & Criterion Validation)
 
 ![](correlation.jpg)
 
@@ -570,6 +570,26 @@ Slight modification was also made to the response scale - the middle-most pilot 
 
 ## Procedure
 
+[Qualtrics panels](https://www.qualtrics.com/research-services/online-sample/) were solicited, with the only eligibility requirement being working adults (either part- or full-time). The engagement items were presented in one of two orderings, prioritizing either the attitudinal or substantive structure:
+
+###
+| Attitudinal Prioritization | Substantive Prioritization           | 
+|----------------------------|--------------------------------------|
+| Affective - Absorption     |`r round(aff.abs$total$raw_alpha, 2)` |
+| Affective - Vigor          |`r round(aff.vig$total$raw_alpha, 2)` |
+| Affective - Dedication     |`r round(aff.ded$total$raw_alpha, 2)` |
+|                            |                                      |
+| Behavioral - Absorption    |`r round(beh.abs$total$raw_alpha, 2)` |
+| Behavioral - Vigor         |`r round(beh.vig$total$raw_alpha, 2)` |
+| Behavioral - Dedication    |`r round(beh.ded$total$raw_alpha, 2)` |
+|                            |                                      |
+| Cognitive - Absorption     |`r round(cog.abs$total$raw_alpha, 2)` |
+| Cognitive - Vigor          |`r round(cog.vig$total$raw_alpha, 2)` |
+| Cognitive - Dedication     |`r round(cog.ded$total$raw_alpha, 2)` |
+###
+
+### Construct validation
+
 For convergent validity indices, we administered the 17-item Utrecht Work Engagement Scale [UWES; @schaufeli_measurement_2002; @schaufeli_defining_2010] as well as the @saks2006antecedents 12-item scale which aggregates to two scales: job and organizational engagement [see also @saks2019antecedents]. [^gsux]
 
 [^gsux]: We had intended to use the Gallup "Q12" for construct validation [@thackray_gallup_2005; @harter_relationship_2013], but Gallup was not willing to share item- or person-level data.
@@ -578,7 +598,9 @@ The English version of the UWES may actually be a translation (difficult to say 
 
 Two short scales from the Oregon Avocational Interest Scales [ORAIS; @goldberg2010personality] were retained for discriminant validitation - [the 5-item "Pets" and 5-item "Game-Playing" scales](https://ipip.ori.org/newORAISKey.htm#Food-Related) were administered.
 
-### Respondents
+### Criterion-related validation
+
+We administered a short 4-item intent-to-quit scale developed by @kelloway1999source. 
 
 
 
