@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Page not found | Engagement Survey Technical Report</title>
   <meta name="description" content="This is a technical report that contains the development of the Eagle IO Engagement survey. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Page not found | Engagement Survey Technical Report" />
   <meta property="og:type" content="book" />
@@ -32,8 +32,9 @@
   
 
 
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,16 +50,15 @@
 
 
 
-
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.2.1/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.18/datatables.js"></script>
+<script src="libs/datatables-binding-0.16/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
@@ -136,23 +136,44 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="procedure.html"><a href="procedure.html#demographic-information"><i class="fa fa-check"></i><b>3.2</b> Demographic Information</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="analyses.html"><a href="analyses.html"><i class="fa fa-check"></i><b>4</b> Analyses</a>
+<li class="chapter" data-level="4" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html"><i class="fa fa-check"></i><b>4</b> Analyses (Scale Definitions)</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="analyses.html"><a href="analyses.html#pilot-analyses-1"><i class="fa fa-check"></i><b>4.1</b> Pilot analyses</a>
+<li class="chapter" data-level="4.1" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#pilot-analyses-1"><i class="fa fa-check"></i><b>4.1</b> Pilot analyses</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="analyses.html"><a href="analyses.html#classical-test-theory"><i class="fa fa-check"></i><b>4.1.1</b> Classical test theory</a></li>
-<li class="chapter" data-level="4.1.2" data-path="analyses.html"><a href="analyses.html#confirmatory-factor-analyses"><i class="fa fa-check"></i><b>4.1.2</b> Confirmatory factor analyses</a></li>
-<li class="chapter" data-level="4.1.3" data-path="analyses.html"><a href="analyses.html#summary"><i class="fa fa-check"></i><b>4.1.3</b> Summary</a></li>
+<li class="chapter" data-level="4.1.1" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#classical-test-theory"><i class="fa fa-check"></i><b>4.1.1</b> Classical test theory</a></li>
+<li class="chapter" data-level="4.1.2" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#confirmatory-factor-analyses"><i class="fa fa-check"></i><b>4.1.2</b> Confirmatory factor analyses</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="analyses.html"><a href="analyses.html#construct-and-criterion-related-validation"><i class="fa fa-check"></i><b>4.2</b> Construct and Criterion-related Validation</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="future-plans.html"><a href="future-plans.html"><i class="fa fa-check"></i><b>5</b> Future plans</a>
+<li class="chapter" data-level="4.2" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#scale-reduction"><i class="fa fa-check"></i><b>4.2</b> Scale Reduction</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="future-plans.html"><a href="future-plans.html#things-to-do"><i class="fa fa-check"></i><b>5.1</b> Things to do</a></li>
-<li class="chapter" data-level="5.2" data-path="future-plans.html"><a href="future-plans.html#research-projects"><i class="fa fa-check"></i><b>5.2</b> Research projects</a></li>
+<li class="chapter" data-level="4.2.1" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#corrected-item-total-informed-scale-definitions"><i class="fa fa-check"></i><b>4.2.1</b> Corrected item-total informed scale definitions</a></li>
+<li class="chapter" data-level="4.2.2" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#modification-index-informed-scale-definitions"><i class="fa fa-check"></i><b>4.2.2</b> Modification index-informed scale definitions</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="author-bios.html"><a href="author-bios.html"><i class="fa fa-check"></i><b>6</b> Author bios</a></li>
-<li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
+<li class="chapter" data-level="4.3" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#final-proposed-structure"><i class="fa fa-check"></i><b>4.3</b> Final proposed structure</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#omega"><i class="fa fa-check"></i><b>4.3.1</b> Omega</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#multigroup-analyses"><i class="fa fa-check"></i><b>4.4</b> Multigroup analyses</a></li>
+<li class="chapter" data-level="4.5" data-path="analyses-scale-definitions.html"><a href="analyses-scale-definitions.html#summary"><i class="fa fa-check"></i><b>4.5</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html"><i class="fa fa-check"></i><b>5</b> Analyses (Construct &amp; Criterion Validation)</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#post-pilot-administration-modifications"><i class="fa fa-check"></i><b>5.1</b> Post-pilot administration modifications</a></li>
+<li class="chapter" data-level="5.2" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#procedure-1"><i class="fa fa-check"></i><b>5.2</b> Procedure</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#section"><i class="fa fa-check"></i><b>5.2.1</b> </a></li>
+<li class="chapter" data-level="5.2.2" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#section-1"><i class="fa fa-check"></i><b>5.2.2</b> </a></li>
+<li class="chapter" data-level="5.2.3" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#construct-validation"><i class="fa fa-check"></i><b>5.2.3</b> Construct validation</a></li>
+<li class="chapter" data-level="5.2.4" data-path="analyses-construct-criterion-validation.html"><a href="analyses-construct-criterion-validation.html#criterion-related-validation"><i class="fa fa-check"></i><b>5.2.4</b> Criterion-related validation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="future-plans.html"><a href="future-plans.html"><i class="fa fa-check"></i><b>6</b> Future plans</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="future-plans.html"><a href="future-plans.html#things-to-do"><i class="fa fa-check"></i><b>6.1</b> Things to do</a></li>
+<li class="chapter" data-level="6.2" data-path="future-plans.html"><a href="future-plans.html#research-projects"><i class="fa fa-check"></i><b>6.2</b> Research projects</a></li>
+<li class="chapter" data-level="6.3" data-path="future-plans.html"><a href="future-plans.html#completed-projects-as-of-march-24-2022"><i class="fa fa-check"></i><b>6.3</b> Completed projects as of March 24, 2022</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="author-bios.html"><a href="author-bios.html"><i class="fa fa-check"></i><b>7</b> Author bios</a></li>
+<li class="chapter" data-level="8" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>8</b> References</a></li>
 <li class="appendix"><span><b>Appendices</b></span></li>
 <li class="chapter" data-level="A" data-path="timeline.html"><a href="timeline.html"><i class="fa fa-check"></i><b>A</b> Timeline of events</a>
 <ul>
@@ -180,7 +201,7 @@ div.csl-indent {
 <li class="chapter" data-level="D.2.1" data-path="corrs.html"><a href="corrs.html#substantive-scales"><i class="fa fa-check"></i><b>D.2.1</b> Substantive scales</a></li>
 <li class="chapter" data-level="D.2.2" data-path="corrs.html"><a href="corrs.html#attitudinal-scales"><i class="fa fa-check"></i><b>D.2.2</b> Attitudinal scales</a></li>
 </ul></li>
-<li><a href="corrs.html#section"></a></li>
+<li><a href="corrs.html#section-2"></a></li>
 </ul></li>
 <li class="chapter" data-level="E" data-path="rdrops.html"><a href="rdrops.html"><i class="fa fa-check"></i><b>E</b> Corrected item-total correlations</a>
 <ul>
@@ -233,7 +254,6 @@ the table of contents to find the page you are looking for.</p>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -274,7 +294,7 @@ gitbook.start({
 },
 "download": ["_main.pdf", "_main.epub"],
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
