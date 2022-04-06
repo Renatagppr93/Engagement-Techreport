@@ -4,10 +4,6 @@
 %
 \documentclass[
 ]{book}
-\title{Engagement Survey Technical Report}
-\author{Eagle I.O}
-\date{Most recently updated 2022-03-24}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -119,6 +115,10 @@
 \usepackage[]{natbib}
 \bibliographystyle{plainnat}
 
+\title{Engagement Survey Technical Report}
+\author{Eagle I.O}
+\date{Most recently updated 2022-04-06}
+
 \begin{document}
 \maketitle
 
@@ -134,7 +134,7 @@
 
 This is a report that documents the technical details regarding the development of the Eagle I.O Engagement survey.
 
-This report was written with \texttt{bookdown} \citep{R-bookdown} within \texttt{rMarkdown} \citep{R-markdown} using \texttt{R} version 4.0.3 \citep{R-base}.
+This report was written with \texttt{bookdown} \citep{R-bookdown} within \texttt{rMarkdown} \citep{R-markdown} using \texttt{R} version 4.1.3 \citep{R-base}.
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -144,7 +144,7 @@ This report was written with \texttt{bookdown} \citep{R-bookdown} within \texttt
 \hypertarget{engagement-as-a-psychological-construct}{%
 \section{Engagement as a Psychological Construct}\label{engagement-as-a-psychological-construct}}
 
-The roots of employee \citep[aka work; e.g.,][]{schaufeli_conceptualization_2010} engagement research likely started with theoretical expansions of forms of employee participation \citep[see, for example,][]{ferris_added_1984} and job involvement \citep[e.g.,][]{elloy_examination_1991}. This exploration extended into broader considerations of attitudes and emotions \citep{staw_employee_1994} and were informed by further exploration of the dimensionality of constructs such as organizational commitment \citep{meyer_three-component_1991}. The 1990's saw focused development and refinement (for example, a dissertation; \citet{leone_relation_1995} or actual semantic reference; \citet{kahn_psychological_1990}). \citet{staw_employee_1994} investigated the relationships between \emph{positive emotions} and favorable work outcomes, and although they do not use the word, ``engagement'', their distinction between felt and expressed emotion likely held influence upon the burgeoning interest in the engagement construct.
+The roots of employee {[}aka work; e.g., \citet{schaufeli_conceptualization_2010}{]} engagement research likely started with theoretical expansions of forms of employee participation \citep[see, for example,][]{ferris_added_1984} and job involvement \citep[e.g.,][]{elloy_examination_1991}. This exploration extended into broader considerations of attitudes and emotions \citep{staw_employee_1994} and were informed by further exploration of the dimensionality of constructs such as organizational commitment \citep{meyer_three-component_1991}. The 1990's saw focused development and refinement (for example, a dissertation; \citet{leone_relation_1995} or actual semantic reference; \citet{kahn_psychological_1990}). \citet{staw_employee_1994} investigated the relationships between \emph{positive emotions} and favorable work outcomes, and although they do not use the word, ``engagement'', their distinction between felt and expressed emotion likely held influence upon the burgeoning interest in the engagement construct.
 
 \citet{kahn_psychological_1990} described engaged employees as being physically involved, cognitively vigilant, and emotionally connected. Although occasionally referred to as residing on the opposing pole to \emph{burnout} \citep{maslach_early_2008}, these two constructs are currently most commonly conceptualized as being distinct \citep{timms2012burnt, kim_burnout_2009, goering2017not, schaufeli2008workaholism}, although certainly not universally \citep{cole2012job, taris2017burnout}. \citet{goering2017not} explore nomological networks, concluding that these two constructs have a moderate (negative) association, but also distinct nomological networks. \citet{schaufeli2008workaholism} investigated both internal and external association indicators, concluding that engagement and burnout (as well as \emph{workaholism}) should be considered three distinct constructs.
 
@@ -328,12 +328,12 @@ These are to be included in future administrations in an attempt to develop mark
 \hypertarget{pilot-analyses-1}{%
 \section{Pilot analyses}\label{pilot-analyses-1}}
 
-282 people responded. We may want to further screen these 282 responses for short response durations. According to communications with Qualtrics in early December, this is the number of seconds to complete the entire survey. Currently, the ``number of people who clicked on the assessment link (330)'' versus valid \emph{n} (282) may take care of our very low duration respondents. The shortest response duration in the 330 datafile is 101 whereas the lowest in the 282 datafile is 43. All analyses were performed via \texttt{R} version R version 4.0.3 (2020-10-10) \citep{R-base}. Demographic consituency of the pilot sample is located in Appendix \ref{pilotdemo}.
+282 people responded. We may want to further screen these 282 responses for short response durations. According to communications with Qualtrics in early December, this is the number of seconds to complete the entire survey. Currently, the ``number of people who clicked on the assessment link (330)'' versus valid \emph{n} (282) may take care of our very low duration respondents. The shortest response duration in the 330 datafile is 101 whereas the lowest in the 282 datafile is 43. All analyses were performed via \texttt{R} version R version 4.1.3 (2022-03-10) \citep{R-base}. Demographic consituency of the pilot sample is located in Appendix \ref{pilotdemo}.
 
 \hypertarget{classical-test-theory}{%
 \subsection{Classical test theory}\label{classical-test-theory}}
 
-In addition to the below interactive plot {[}via \texttt{plotly} version 4.9.2.1; \citet{R-plotly}{]}, a full inter-item correlation matrix is located in Appendix \ref{corrs}.
+In addition to the below interactive plot {[}via \texttt{plotly} version 4.10.0; \citet{R-plotly}{]}, a full inter-item correlation matrix is located in Appendix \ref{corrs}.
 
 \includegraphics{_main_files/figure-latex/interactive_plot-1.pdf}
 
@@ -346,11 +346,29 @@ In addition to the below interactive plot {[}via \texttt{plotly} version 4.9.2.1
 \hypertarget{internal-consistency-estimates}{%
 \subsubsection{Internal consistency estimates}\label{internal-consistency-estimates}}
 
-Condition 1 administered items within the substantive dimensions (with successive randomized blocks of Cognitive, Affective, and Behavioral items). Condition 2 administered items within the attitudinal dimensions (with successive randomized blocks of Absorption, Vigor, and Dedication items). Condition 3 stressed the substantive dimensions (with items fully randomized regardless of attitudinal association). Condition 4 stressed the attitudinal dimensions (with items fully randomized within attitudinal dimension regardless of substantive scale association, see Chapter \ref{conds} and Appendix \ref{pilot2}). All internal consistency estimates were generated via \texttt{psych} version 2.0.12 \citep{R-psych}. Alphas for the candidate 12-item scales were:
+Condition 1 administered items within the substantive dimensions (with successive randomized blocks of Cognitive, Affective, and Behavioral items). Condition 2 administered items within the attitudinal dimensions (with successive randomized blocks of Absorption, Vigor, and Dedication items). Condition 3 stressed the substantive dimensions (with items fully randomized regardless of attitudinal association). Condition 4 stressed the attitudinal dimensions (with items fully randomized within attitudinal dimension regardless of substantive scale association, see Chapter \ref{conds} and Appendix \ref{pilot2}). All internal consistency estimates were generated via \texttt{psych} version 2.2.3 \citep{R-psych}. Alphas for the candidate 12-item scales were:
 
-\begin{longtable}[]{@{}llllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0812}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2081}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1777}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1777}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1777}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1777}}@{}}
 \toprule
-Dimension & Undifferentiated & Condition 1 & Condition 2 & Condition 3 & Condition 4 \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Dimension
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Undifferentiated
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Condition 1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Condition 2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Condition 3
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Condition 4
+\end{minipage} \\
 \midrule
 \endhead
 Affective & 0.87 & 0.88 & 0.84 & 0.88 & 0.87 \\
@@ -389,7 +407,7 @@ Corrected item-total correlations are presented in Appendix \ref{rdrops}
 \hypertarget{confirmatory-factor-analyses}{%
 \subsection{Confirmatory factor analyses}\label{confirmatory-factor-analyses}}
 
-We used \texttt{lavaan} version 0.6.8 \citep{R-lavaan} and \texttt{semPlot} version 1.1.2 \citep{R-semPlot}
+We used \texttt{lavaan} version 0.6.11 \citep{R-lavaan} and \texttt{semPlot} version 1.1.5 \citep{R-semPlot}
 
 \includegraphics{_main_files/figure-latex/CFA-1.pdf} \includegraphics{_main_files/figure-latex/CFA-2.pdf}
 
@@ -399,9 +417,33 @@ Deese guys also do bifactor stuff: \citet{mansolf_when_2017}
 
 \includegraphics{_main_files/figure-latex/bifactor-1.pdf}
 
-\begin{longtable}[]{@{}llllllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1699}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1307}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1111}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1176}}@{}}
 \toprule
-Model & \(\chi^2\) & \emph{df} & RMSEA & SRMR & CFI & TLI & AIC \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\chi^2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\emph{df}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RMSEA
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SRMR
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+CFI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+TLI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AIC
+\end{minipage} \\
 \midrule
 \endhead
 3-factor substantive & 2159.21 & 591 & 0.11 & 0.1 & 0.64 & 0.62 & 25481.97 \\
@@ -428,9 +470,33 @@ Scale reduction was performed from 36 to 22 items using modification indices fro
 
 \includegraphics{_main_files/figure-latex/CFAmod-1.pdf} \includegraphics{_main_files/figure-latex/CFAmod-2.pdf} \includegraphics{_main_files/figure-latex/CFAmod-3.pdf} \includegraphics{_main_files/figure-latex/CFAmod-4.pdf} \includegraphics{_main_files/figure-latex/CFAmod-5.pdf} \includegraphics{_main_files/figure-latex/CFAmod-6.pdf}
 
-\begin{longtable}[]{@{}llllllll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1636}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1152}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1152}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}@{}}
 \toprule
-18-Item Model & \(\chi^2\) & \emph{df} & RMSEA & SRMR & CFI & TLI & AIC \\
+\begin{minipage}[b]{\linewidth}\raggedright
+18-Item Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(\chi^2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\emph{df}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RMSEA
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+SRMR
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+CFI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+TLI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+AIC
+\end{minipage} \\
 \midrule
 \endhead
 substantive (att priority) & 430.47 & 132 & 0.09 & 0.07 & 0.84 & 0.81 & 13467.84 \\
@@ -716,14 +782,14 @@ Three projects are being targetted for SIOP 2022:
   Need to first finalize scale definitions
 \end{itemize}
 
-\hypertarget{completed-projects-as-of-march-24-2022}{%
-\section{Completed projects as of March 24, 2022}\label{completed-projects-as-of-march-24-2022}}
+\hypertarget{completed-projects-as-of-april-06-2022}{%
+\section{Completed projects as of April 06, 2022}\label{completed-projects-as-of-april-06-2022}}
 
 Garcia Prieto Palacios Roji, R., Stachowski, A. A., \& Kulas, J. T. (2022). O*Net Demands and Resources: Associations with Stress, Burnout, and Engagement {[}\href{https://renatagppr93.github.io/SIOP2022/}{Poster}{]}. Society for Industrial and Organizational Psychology Annual Conference, Seattle, WA, United States.
 
 Osorio-Duffoo, C., Garcia Prieto Palacios Roji, R., Russell, M.C., \& Kulas, J.T. (2022). Engagement Versus Attitude: Measurement Invariance Across Item Orderings {[}Poster{]}. Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
 
-Russell, M.C., Garcia Prieto Palacios Roji, R., Osorio-Duffoo, C., Kulas, J.T. (2022). Development of an Intended Bifactor Engagement Measure {[}Poster{]}. Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
+Russell, M.C., Garcia Prieto Palacios Roji, R., Osorio-Duffoo, C., Kulas, J.T. (2022). Development of an Intended Bifactor Engagement Measure {[}\href{https://morgan-russell.github.io/SIOP-2022-poster/}{Poster}{]}. Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
 
 \hypertarget{author-bios}{%
 \chapter{Author bios}\label{author-bios}}
@@ -4357,7 +4423,7 @@ This organization provides the resources necessary for me to successfully perfor
 \hypertarget{qualitative}{%
 \chapter{Qualitative item characteristics}\label{qualitative}}
 
-Item reading level information was performed via the packages \texttt{quanteda} version 2.1.2 \citep{R-quanteda} and \texttt{quanteda.textstats} version 0.95 \citep{R-quanteda.textstats} in R version 4.0.3 (2020-10-10) \citep{R-base}. Two indices were investigated: ``Flesch-Kincaid'' is the same grade level index that's currently used by Microsoft Word \citep{kincaid_derivation_1975} whereas ``Dale.Chall'' reflects \emph{N\textsubscript{wd}} {[}``difficulty'' of words; \citet{chall_dale_1995}{]}. These indices are primarily influenced by two qualitative characteristics: \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wf}}}, which is the number of words matching the Dale-Chall List of 3000 ``familiar words'', and \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wd}}}, which is the number of ``difficult'' words not matching the Dale-Chall list of ``familiar'' words.
+Item reading level information was performed via the packages \texttt{quanteda} version 3.2.1 \citep{R-quanteda} and \texttt{quanteda.textstats} version 0.95 \citep{R-quanteda.textstats} in R version 4.1.3 (2022-03-10) \citep{R-base}. Two indices were investigated: ``Flesch-Kincaid'' is the same grade level index that's currently used by Microsoft Word \citep{kincaid_derivation_1975} whereas ``Dale.Chall'' reflects \emph{N\textsubscript{wd}} {[}``difficulty'' of words; \citet{chall_dale_1995}{]}. These indices are primarily influenced by two qualitative characteristics: \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wf}}}, which is the number of words matching the Dale-Chall List of 3000 ``familiar words'', and \href{https://quanteda.io/reference/textstat_readability.html}{\emph{N\textsubscript{wd}}}, which is the number of ``difficult'' words not matching the Dale-Chall list of ``familiar'' words.
 
 The average Flesch-Kincaied (e.g., reading grade) for our 36 candidate pilot items was 6.2 (\emph{sd} = 3.04). The average Dale-Chall index was 38.61 (\emph{sd} = 11.11).
 
