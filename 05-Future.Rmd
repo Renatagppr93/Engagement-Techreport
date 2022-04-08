@@ -60,11 +60,11 @@ Three projects are being targetted for SIOP 2022:
 
 ## Completed projects as of `r format(Sys.Date(), format="%B %d, %Y")`
 
-Garcia Prieto Palacios Roji, R., Stachowski, A. A., & Kulas, J. T. (2022). O*Net Demands and Resources: Associations with Stress, Burnout, and Engagement [[Poster](https://renatagppr93.github.io/SIOP2022/)]. Society for Industrial and Organizational Psychology Annual Conference, Seattle, WA, United States.
+Garcia Prieto Palacios Roji, R., Stachowski, A. A., & Kulas, J. T. (2022). [O*Net Demands and Resources: Associations with Stress, Burnout, and Engagement](https://renatagppr93.github.io/SIOP2022/) (Poster). Society for Industrial and Organizational Psychology Annual Conference, Seattle, WA, United States.
 
-Osorio-Duffoo, C., Garcia Prieto Palacios Roji, R., Russell, M.C., & Kulas, J.T. (2022). Engagement Versus Attitude: Measurement Invariance Across Item Orderings [Poster]. Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
+Osorio-Duffoo, C., Garcia Prieto Palacios Roji, R., Russell, M.C., & Kulas, J.T. (2022). [Engagement Versus Attitude: Measurement Invariance Across Item Orderings](https://casosorio.github.io/SIOP-2022/) (Poster). Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
 
-Russell, M.C., Garcia Prieto Palacios Roji, R., Osorio-Duffoo, C., Kulas, J.T. (2022). Development of an Intended Bifactor Engagement Measure [[Poster](https://morgan-russell.github.io/SIOP-2022-poster/)]. Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
+Russell, M.C., Garcia Prieto Palacios Roji, R., Osorio-Duffoo, C., Kulas, J.T. (2022). [Development of an Intended Bifactor Engagement Measure](https://morgan-russell.github.io/SIOP-2022-poster/) (Poster). Society for Industrial-Organizational Psychology Annual Conference, Seattle, WA, United States.
 
 
 

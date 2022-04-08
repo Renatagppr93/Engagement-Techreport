@@ -7,7 +7,7 @@ always_allow_html: yes
 documentclass: book
 cover-image: "EE.jpeg"
 bibliography: [book.bib, engage.bib, packages.bib, bifactor.bib]
-csl: apa2.csl
+csl: apa7.csl
 #biblio-style: "apalike"
 link-citations: yes
 toc-depth: 4
@@ -25,6 +25,7 @@ description: "This is a technical report that contains the development of the Ea
 #library(quanteda.textstats)
 library(parallel)
 library(quanteda.textstats)
+library(xaringan)
 numCores <- detectCores()
 mc.cores = numCores
 
