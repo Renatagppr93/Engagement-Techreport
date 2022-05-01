@@ -84,3 +84,5 @@ frequency-distributions-by-dimension
 tables-of-qualitative-indices
 mods
 completed-projects-as-of-may-01-2022
+inputs-and-outputs
+embedded-application
