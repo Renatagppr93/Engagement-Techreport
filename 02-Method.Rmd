@@ -1,6 +1,6 @@
 # Instrument creation
 
-![](develop.jpg)
+![](Images\develop.jpg)
 
 ## Intended Structure {#ABCDAV}
 
@@ -35,7 +35,7 @@ After content validation but prior to settling on 4 candidate items per 3x3 cond
 
 ```{r contentvalidation, echo=FALSE, warning=FALSE, message=FALSE}
 
-cvalid <- read.csv("Engagement Survey Content Validity.csv")
+cvalid <- read.csv("Content Validity/Engagement Survey Content Validity.csv")
 
 items <- nrow(cvalid)
 

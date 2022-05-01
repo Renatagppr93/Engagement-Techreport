@@ -1,6 +1,6 @@
 # Introduction {#intro}
 
-![](research.jpg)
+![](Images\research.jpg)
 
 ## Engagement as a Psychological Construct
 

@@ -1,11 +1,11 @@
 # Analyses (Scale Definitions)
 
-![](results.jpg)
+![](Images\results.jpg)
 
 
 ```{r data, echo=FALSE, warning=FALSE, message=FALSE}
 
-temp <- read.csv("qualtrics_pilot_data.csv", header=FALSE, na.strings="")
+temp <- read.csv("Pilot Qualtrics/qualtrics_pilot_data.csv", header=FALSE, na.strings="")
 
 x <- temp[2,]
 data <- temp[-c(1:3),]
@@ -540,7 +540,7 @@ Recommendation for final instrument based on consideration of all of the above p
 
 # Analyses (Construct & Criterion Validation)
 
-![](correlation.jpg)
+![](Images\correlation.jpg)
 
 ## Post-pilot administration modifications
 
