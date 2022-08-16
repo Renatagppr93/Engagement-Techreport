@@ -113,7 +113,7 @@ As reported by Qualtrics' `Recorded Date` estimates:
 
 ```{r pilotdate, echo=FALSE, warning=FALSE, fig.cap="Qualtrics recorded date of pilot survey response"}
 
-fordemo <- read.csv("qualtrics_pilot_data.csv", header=FALSE, na.strings="")
+fordemo <- read.csv("..\\Engagement-Techreport\\Pilot Qualtrics\\qualtrics_pilot_data.csv", header=FALSE, na.strings="")
 
 y <- fordemo[2,]
 demo <- fordemo[-c(1:3),]

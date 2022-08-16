@@ -1,6 +1,6 @@
 bookdown::gitbook:
   split_bib: no
-  css: style2.css
+  css: style.css
   csl: "apa2.csl"
   config:
     toc_depth: 1
@@ -15,7 +15,7 @@ bookdown::gitbook:
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
-  latex_engine: lualatex
+  latex_engine: xelatex
   citation_package: natbib
   csl: "apa.csl"
   keep_tex: yes

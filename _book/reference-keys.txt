@@ -32,7 +32,8 @@ conds
 sampling-strategy-pilot
 pilot-analyses
 demographic-information
-analyses-scale-definitions
+part-analyses
+scale-definitions
 pilot-analyses-1
 classical-test-theory
 internal-consistency-estimates
@@ -54,7 +55,7 @@ criterion-related-validation
 future-plans
 things-to-do
 research-projects
-completed-projects-as-of-april-08-2022
+completed-projects-as-of-august-16-2022
 author-bios
 references
 timeline
@@ -83,6 +84,3 @@ qualitative
 frequency-distributions-by-dimension
 tables-of-qualitative-indices
 mods
-completed-projects-as-of-may-01-2022
-inputs-and-outputs
-embedded-application
